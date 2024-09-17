@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Monster List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header"></div>
+    <!-- Page Content START Here -->
+
+    <h1>Monster Data List</h1>
+    <h2>Shared Monsters</h2>
+    <h3>Small Monsters</h3>
+      Aptonoth, Slagtoth, Apceros, Kelbi, Moofah, Larioth
+    <h3>Large Monsters</h3>
+      Rathalos, Rathian
+    <h2>Monster Hunter Forsaken</h2>
+    <h3>Large Monster</h2>
+      Ancretalos, Glacatadus, Lusmataur
+    
+    <!-- Page Content ENDING Here -->
+    <div id="footer"></div>
+
+    <script>
+        // Function to load HTML content into an element
+        function loadHTML(id, file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(id).innerHTML = data;
+                });
+        }
+
+        // Load header and footer
+        loadHTML('header', 'header.html');
+        loadHTML('footer', 'footer.html');
+    </script>
+</body>
+</html>
