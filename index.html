@@ -4,34 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Game Database</title>
+    <title>Page Title</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Monster Hunter Database</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Monsters</a></li>
-                <li><a href="#">Weapons</a></li>
-                <li><a href="#">Quests</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section>
-        <h2>Welcome to the Monster Hunter Database</h2>
-        <p>Browse through our extensive list of monsters, weapons, and quests!</p>
-        
-        <button onclick="window.location.href='MHForsaken.html';">Monster Hunter Forsaken</button>
+    <div id="header"></div>
+    <!-- Page Content Here -->
+    <div id="footer"></div>
 
-    </section>
-    
-    <footer>
-        <p>&copy; 2024 Monster Hunter Database</p>
-    </footer>
+    <script>
+        // Function to load HTML content into an element
+        function loadHTML(id, file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(id).innerHTML = data;
+                });
+        }
 
-    <script src="script.js"></script>
+        // Load header and footer
+        loadHTML('header', 'header.html');
+        loadHTML('footer', 'footer.html');
+    </script>
 </body>
 </html>
